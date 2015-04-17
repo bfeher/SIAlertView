@@ -39,9 +39,12 @@
 		7E23C6A8173277EA00784CF1 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E23C6A7173277EA00784CF1 /* Icon-72.png */; };
 		7E23C6AA173277EE00784CF1 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E23C6A9173277EE00784CF1 /* Icon-72@2x.png */; };
 		7EEECA69182350B1001FEDF5 /* UIWindow+SIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EEECA68182350B1001FEDF5 /* UIWindow+SIUtils.m */; };
+		C3577E9B4AE228C7955561C1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D0F51730A2C5D51EB944B8 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05226730A67A981C9EABF604 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "../Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		66D0F51730A2C5D51EB944B8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		72AD5C8617BD1B7200A85539 /* button-cancel-d.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-cancel-d.png"; sourceTree = "<group>"; };
 		72AD5C8717BD1B7200A85539 /* button-cancel-d@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-cancel-d@2x.png"; sourceTree = "<group>"; };
 		72AD5C8817BD1B7200A85539 /* button-cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-cancel.png"; sourceTree = "<group>"; };
@@ -81,6 +84,7 @@
 		7E23C6A9173277EE00784CF1 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
 		7EEECA67182350B1001FEDF5 /* UIWindow+SIUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+SIUtils.h"; sourceTree = "<group>"; };
 		7EEECA68182350B1001FEDF5 /* UIWindow+SIUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+SIUtils.m"; sourceTree = "<group>"; };
+		92C28CB4FBEFBF2C1FED4D7F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "../Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,12 +96,22 @@
 				7E23C67317325EAA00784CF1 /* UIKit.framework in Frameworks */,
 				7E23C67517325EAA00784CF1 /* Foundation.framework in Frameworks */,
 				7E23C67717325EAA00784CF1 /* CoreGraphics.framework in Frameworks */,
+				C3577E9B4AE228C7955561C1 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		553E51EF5F138BFB2BCFF43E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				92C28CB4FBEFBF2C1FED4D7F /* Pods.debug.xcconfig */,
+				05226730A67A981C9EABF604 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		72AD5C8517BD1B7200A85539 /* Button Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +138,7 @@
 				7E23C67817325EAA00784CF1 /* SIAlertViewExample */,
 				7E23C67117325EAA00784CF1 /* Frameworks */,
 				7E23C67017325EAA00784CF1 /* Products */,
+				553E51EF5F138BFB2BCFF43E /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,6 +157,7 @@
 				7E23C67217325EAA00784CF1 /* UIKit.framework */,
 				7E23C67417325EAA00784CF1 /* Foundation.framework */,
 				7E23C67617325EAA00784CF1 /* CoreGraphics.framework */,
+				66D0F51730A2C5D51EB944B8 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -224,9 +240,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E23C69517325EAB00784CF1 /* Build configuration list for PBXNativeTarget "SIAlertViewExample" */;
 			buildPhases = (
+				207989D2354C9D3E8593D15F /* Check Pods Manifest.lock */,
 				7E23C66B17325EAA00784CF1 /* Sources */,
 				7E23C66C17325EAA00784CF1 /* Frameworks */,
 				7E23C66D17325EAA00784CF1 /* Resources */,
+				4BBA4386299F4372D08745A0 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -295,6 +313,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		207989D2354C9D3E8593D15F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4BBA4386299F4372D08745A0 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7E23C66B17325EAA00784CF1 /* Sources */ = {
@@ -399,6 +450,7 @@
 		};
 		7E23C69617325EAB00784CF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92C28CB4FBEFBF2C1FED4D7F /* Pods.debug.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SIAlertViewExample/SIAlertViewExample-Prefix.pch";
@@ -411,6 +463,7 @@
 		};
 		7E23C69717325EAB00784CF1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05226730A67A981C9EABF604 /* Pods.release.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SIAlertViewExample/SIAlertViewExample-Prefix.pch";
